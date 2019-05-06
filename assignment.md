@@ -2,10 +2,7 @@
 
 ## Part 1: Analyzing Click Through Rate
 
-_**Please submit your final code in**_ `individual.py`
-
-We will use hypothesis testing to analyze **Click Through Rate (CTR)** on the New York Times website.
-CTR is defined as the number of clicks a user makes per impression that is made upon the user (impression means view, so how the frequency that the user clicks on something they have seen).
+We will use hypothesis testing to analyze **Click Through Rate (CTR)** on the New York Times website. CTR is defined as the number of clicks a user makes per impression that is made upon the user (impression means view, so how the frequency that the user clicks on something they have seen).
 
 We are going to determine if there is statistically significant
 difference between the mean CTR for the following groups:
@@ -41,7 +38,7 @@ The Welch's t-test, unlike Student's t-test, does *not* assume the two populatio
    scipy.stats.ttest_ind(a, b, equal_var=False)
    ```
 
-7. On the other hand, the welch's t-test *does* assume that the two populations are normally distriuted!  Does this seem reasonable in this situation?
+7. On the other hand, the Welch's t-test *does* assume that the two populations are normally distributed!  Does this seem reasonable in this situation?
 
 None: If your answer is *no*, and you are concerned with the consequences of this, you may want to investigate the concept of a non-parametric test, as they make no such strong distributional assumptions.
 
@@ -89,11 +86,14 @@ Remember that we want to be sure the change is atually *caused* by the switch to
 
 3. You ran a pilot experiment according to ``Question 1`` for ~1 day (Tuesday). The collected data is in ``data/experiment.csv``. Import the data into a pandas dataframe. Check the data for duplicates and clean the data as appropriate. 
 
-4. Calculate a p-value for a 1% lift from using the new page compare to the old page. We've supplied a `z-test` function that 
+4. Calculate a p-value for a 1% lift from using the new page compare to the old page. We've supplied a `z-test` function that can test for a given amount of lift:
 
-   What assumptions are you making when you use a z-test.  The `effect_size` argument will be useful, since we are not looking to see that one click through rate is simply *different* than another, we want to know that they are different *by a certain ammount*.
+    H0: ctr_old - ctr_new < lift
+    HA: ctr_old - ctr_new >= lift
+    
+The `effect_size` argument will be useful, since we are not looking to see that one click through rate is simply *different* than another, we want to know that they are different *by a certain ammount*.
 
-   Interpret the p-value and explain your decision whether to recommend adopting the new page or not.
+What assumptions are you making when you use such a z-test. Interpret the p-value and explain your decision whether to recommend adopting the new page or not.
 
 6. Assume your test was insignificant. Given the setting of the experiment and the context of the problem, why might you be hesitant to make the conclusion to not use the new landing page. What would you do instead? 
    
