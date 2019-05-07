@@ -64,6 +64,7 @@ Note: In this data set, the binary encoding of gender is: `Male: 1, Female: 0`
 
 It's easy to tell yourself stories that justify what you think you have observed.  Be careful about taking them as evidence.
 
+
 ## Part 2: A / B Testing Landing Pages
 
 Designers at Etsy have created a **new landing page** in an attempt to improve sign-up rate for local meetups.
@@ -88,10 +89,18 @@ Remember that we want to be sure the change is atually *caused* by the switch to
 
 4. Calculate a p-value for a 1% lift from using the new page compare to the old page. We've supplied a `z-test` function that can test for a given amount of lift:
 
+    ```
     H0: ctr_old - ctr_new < lift
     HA: ctr_old - ctr_new >= lift
-    
+    ```
+
 The `effect_size` argument will be useful, since we are not looking to see that one click through rate is simply *different* than another, we want to know that they are different *by a certain ammount*.
+
+To import this function (assuming you are running python from the directory containing this `assignemnt.py` file) you should use:
+
+    ```python
+    from src.z_test import z_test
+    ```
 
 What assumptions are you making when you use such a z-test. Interpret the p-value and explain your decision whether to recommend adopting the new page or not.
 
