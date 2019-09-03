@@ -1,3 +1,3 @@
 # Null Hypothesis Signifigance Testing.
 
-TBD
+The [assignment](assignment.md) will give you experience performing hypothesis tests.
