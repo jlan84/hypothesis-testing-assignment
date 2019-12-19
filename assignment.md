@@ -46,7 +46,7 @@ None: If your answer is *no*, and you are concerned with the consequences of thi
 
 Note: In this data set, the binary encoding of gender is: `Male: 1, Female: 0`
 
-8. Calculate a new column called AgeGroup, which bins Age into the following buckets
+9. Calculate a new column called AgeGroup, which bins Age into the following buckets
 
    `'(18, 24]', '(24, 34]', '(34, 44]', '(44, 54]', '(54, 64]', '(64, 1000]', '(7, 18]'`
 
@@ -54,13 +54,13 @@ Note: In this data set, the binary encoding of gender is: `Male: 1, Female: 0`
 
    Use pandas' [cut](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.cut.html) function to bucket the ages.
 
-9. Determine the pairs of age groups where the difference in mean CTR is statistically significant. Collect the p-values and the difference of the means for each pair.  Store these results in a `DataFrame`.
+10. Determine the pairs of age groups where the difference in mean CTR is statistically significant. Collect the p-values and the difference of the means for each pair.  Store these results in a `DataFrame`.
 
    Rank (in descending order) the difference in mean CTR for the pairs that are statistically significant. Comment on the trend you observe for groups `(64, 1000]`, `(54, 64]` and `(7, 18]`.
 
    Rank (in ascending order) the difference in mean CTR for the pairs that are _statistically insignificant_. State the 3 groups that are the least different in mean CTR and provide an explanation for why you think this is true.
 
-10. How much do you trust the stories you just told youself.  Imagine that you observed the *exact opposite* situation than you actually did.  Could you come up with a story to justify *that*?
+11. How much do you trust the stories you just told youself.  Imagine that you observed the *exact opposite* situation than you actually did.  Could you come up with a story to justify *that*?
 
 It's easy to tell yourself stories that justify what you think you have observed.  Be careful about taking them as evidence.
 
@@ -83,11 +83,11 @@ Remember that we want to be sure the change is atually *caused* by the switch to
    
 2. Why is it useful to report the change in conversion in terms of lift instead of absolute difference in conversion?
 
-2. State your null hypothesis and alternative hypothesis. Is your alternative hypothesis set up for a one-tailed or two-tailed test? Explain your choice.
+3. State your null hypothesis and alternative hypothesis. Is your alternative hypothesis set up for a one-tailed or two-tailed test? Explain your choice.
 
-3. You ran a pilot experiment according to ``Question 1`` for ~1 day (Tuesday). The collected data is in ``data/experiment.csv``. Import the data into a pandas dataframe. Check the data for duplicates and clean the data as appropriate. 
+4. You ran a pilot experiment according to ``Question 1`` for ~1 day (Tuesday). The collected data is in ``data/experiment.csv``. Import the data into a pandas dataframe. Check the data for duplicates and clean the data as appropriate. 
 
-4. Calculate a p-value for a 1% lift from using the new page compare to the old page. We've supplied a `z-test` function that can test for a given amount of lift:
+5. Calculate a p-value for a 1% lift from using the new page compare to the old page. We've supplied a `z-test` function that can test for a given amount of lift:
 
     ```
     H0: ctr_old - ctr_new < lift
