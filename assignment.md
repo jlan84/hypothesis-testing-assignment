@@ -42,7 +42,7 @@ The Welch's t-test, unlike Student's t-test, does *not* assume the two populatio
 
 None: If your answer is *no*, and you are concerned with the consequences of this, you may want to investigate the concept of a non-parametric test, as they make no such strong distributional assumptions.
 
-8. Determine if the mean CTR between male users and female users is statistically different. Use only the rows where the users are signed in (the only case where the gender indicator is meaningful).  
+8. Determine if the mean CTR between male users (1) and female users (0) is statistically different. Use only the rows where the users are signed in (the only case where the gender indicator is meaningful).  
 
 Note: In this data set, the binary encoding of gender is: `Male: 1, Female: 0`
 
