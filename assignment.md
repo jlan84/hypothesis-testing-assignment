@@ -1,6 +1,8 @@
-# Hypothesis Testing Exercise
+# Hypothesis Testing
 
-## Part 1: Analyzing Click Through Rate
+## Basic
+
+### Part 1: Analyzing Click Through Rate
 
 We will use hypothesis testing to analyze **Click Through Rate (CTR)** on the New York Times website. CTR is defined as the number of clicks a user makes per impression that is made upon the user (impression means view, so how the frequency that the user clicks on something they have seen).
 
@@ -64,8 +66,9 @@ Note: In this data set, the binary encoding of gender is: `Male: 1, Female: 0`
 
 It's easy to tell yourself stories that justify what you think you have observed.  Be careful about taking them as evidence.
 
+## Advanced
 
-## Part 2: A / B Testing Landing Pages
+### Part 2: A / B Testing Landing Pages
 
 Designers at Etsy have created a **new landing page** in an attempt to improve sign-up rate for local meetups.
 
